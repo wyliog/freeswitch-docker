@@ -1,0 +1,15 @@
+version: '2'
+services:
+   freeswitch:
+     hostname: freeswitch
+     container_name: freeswitch
+     network_mode: "host"
+     restart: always
+     image: wyliog/freeswitch
+     command: freeswitch
+     logging:
+       options:
+         max-size: 10m
+     volumes:
+      - ./conf:/etc/freeswitch
+     tty: true
