@@ -5,7 +5,8 @@ services:
      container_name: freeswitch
      network_mode: "host"
      restart: always
-     image: wyliog/freeswitch
+     build: ./
+    # image: wyliog/freeswitch
      command: freeswitch
      logging:
        options:
