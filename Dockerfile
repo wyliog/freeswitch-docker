@@ -9,7 +9,7 @@ yum install -y devtoolset-8 && \
 scl enable devtoolset-8 'bash' && \
 cd /usr/local/src && \
 git clone -b v1.10 https://github.com/signalwire/freeswitch.git freeswitch && \
-cd /usr/local/src/freeswitch && \
+cd /usr/local/src/freeswitch && cp -f /modules.conf . \
 ./bootstrap.sh -j && \
 ./configure --enable-portable-binary \
             --prefix=/usr --localstatedir=/var --sysconfdir=/etc \
